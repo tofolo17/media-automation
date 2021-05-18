@@ -14,4 +14,4 @@ Projetos simples relativos a automatização de processos e extração de dados.
 
 Dentre as bibliotecas utilizadas, cito como relevante as seguintes: PyAutoGui, BS4, Instaloader, Pandas, Requests and Selenium.
 
-A utilização indevida destes scripts não são de minha responsabilidade. Os mesmo foram criados por pura ludicidade e exploração de limites, nenhum provento foi recebido e nenhuma regulação legal foi quebrada.
+A utilização indevida destes scripts não são de minha responsabilidade. Os mesmos foram criados por pura ludicidade e exploração de limites, nenhum provento foi recebido e nenhuma regulação legal foi quebrada.
