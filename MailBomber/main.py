@@ -4,7 +4,7 @@ from math import floor
 from random import choice
 from time import time
 
-from Utilities import get_url_text
+from Utils import get_url_text
 
 # Get book's content
 book_text = get_url_text("https://www.gutenberg.org/files/2600/2600-h/2600-h.htm")

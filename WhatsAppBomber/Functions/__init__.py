@@ -2,7 +2,7 @@ from time import sleep
 
 import pyautogui
 
-from Utilities import get_url_text
+from Utils import get_url_text
 
 
 def send_image():
