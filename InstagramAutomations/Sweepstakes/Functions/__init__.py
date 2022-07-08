@@ -5,28 +5,32 @@ from tkinter import *
 import pyautogui as pg
 
 
-def vai_e_clica(x: int, y: int):
-    pg.moveTo(x, y, randint(50, 100) / 100)
+def vai_e_clica(xy: tuple):
+    pg.moveTo(xy[0], xy[1], randint(50, 100) / 100)
     pg.click(button='left')
 
 
-def vai_e_segura(x: int, y: int):
-    pg.moveTo(x, y, randint(50, 100) / 100)
+def randomiza(x, y):
+    return x + (randint(-100, 100) / 1000), y + (randint(-100, 100) / 1000),
+
+
+def vai_e_segura(xy: tuple):
+    pg.moveTo(xy[0], xy[1], randint(50, 100) / 100)
     pg.mouseDown(button='left')
     sleep(1)
     pg.mouseUp(button='left')
 
 
-def scroll(x: int, y: int):
+def scroll(xy: tuple):
     pg.mouseDown(button='left')
-    pg.moveTo(x, y, 1)
+    pg.moveTo(xy[0], xy[1], 1)
     pg.mouseUp(button='left')
 
 
-def verifica_bloqueio(x, y):
-    pg.moveTo(x, y, randint(50, 75) / 100)
+def verifica_bloqueio(xy: tuple):
+    pg.moveTo(xy[0], xy[1], randint(50, 75) / 100)
     pg.mouseDown(button='left')
-    pg.moveTo(x + 200, y, randint(50, 75) / 100)
+    pg.moveTo(xy[0] + 200, xy[1], randint(50, 75) / 100)
     pg.mouseUp(button='left')
     pg.hotkey('ctrl', 'c')
 

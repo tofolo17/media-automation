@@ -1,8 +1,8 @@
 from Classes import *
 
-username = ""
-password = ""
-account = ""
+username = input()
+password = input()
+account = input()
 
 insta_bot = InstaBot(username, password, account)
 

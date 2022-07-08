@@ -17,29 +17,37 @@ refresh = coordenadas[8]
 
 # Dicionário  de parâmetros
 p_sorteio = {
-    'Quantidade de participantes': 3,
+    'Quantidade de participantes': 2,
     'Contador': pegar_contagem('Data/contagem'),
-    'Contagem final': 150,
+    'Contagem final': 200,
 }
 
 # Clica no navegador
-vai_e_clica(int(navegador[0]), int(navegador[1]))
+vai_e_clica(randomiza(int(navegador[0]), int(navegador[1])))
 
 while p_sorteio['Contador'] <= p_sorteio['Contagem final']:
     # CLica na publicação
-    vai_e_clica(int(post[0]), int(post[1]))
+    vai_e_clica(randomiza(int(post[0]), int(post[1])))
 
     sleep(1)
 
     # Copia algo aleatório
-    pg.moveTo(int(copia_inicial[0]), int(copia_inicial[1]), randint(50, 100) / 100)
+    pg.moveTo(
+        int(copia_inicial[0]) + (randint(-100, 100) / 1000),
+        int(copia_inicial[1]) + (randint(-100, 100) / 1000),
+        randint(50, 100) / 100
+    )
     pg.mouseDown(button='left')
-    pg.moveTo(int(copia_final[0]), int(copia_final[1]), randint(50, 100) / 100)
+    pg.moveTo(
+        int(campo_input[0]) + (randint(-100, 100) / 1000),
+        int(copia_final[1]) + (randint(-100, 100) / 1000),
+        randint(50, 100) / 100
+    )
     pg.mouseUp(button='left')
     pg.hotkey('ctrl', 'c')
 
     # Clica no campo de escrita
-    vai_e_clica(int(campo_input[0]), int(campo_input[1]))
+    vai_e_clica(randomiza(int(campo_input[0]), int(campo_input[1])))
 
     # Faz os comentários
     for i in range(
@@ -50,7 +58,7 @@ while p_sorteio['Contador'] <= p_sorteio['Contagem final']:
         print(f'{lista_users[i]} || {i}')
 
     # Comenta
-    vai_e_clica(int(button[0]), int(button[1]))
+    vai_e_clica(randomiza(int(button[0]), int(button[1])))
 
     # Atualiza os arquivos de texto e parâmetros da função
     atualizar_contagem(
@@ -64,10 +72,10 @@ while p_sorteio['Contador'] <= p_sorteio['Contagem final']:
     sleep(2.5)
 
     # Checa bloqueio
-    valor_copiado = verifica_bloqueio(int(bloqueio[0]), int(bloqueio[1]))
+    valor_copiado = verifica_bloqueio(randomiza(int(bloqueio[0]), int(bloqueio[1])))
     print(f'Valor copiado: {valor_copiado}\n')
     if 'comentário.' in valor_copiado:
-        vai_e_clica(int(sair_post[0]), int(sair_post[1]))
+        vai_e_clica(randomiza(int(sair_post[0]), int(sair_post[1])))
 
         sleep_time = randint(500, 1000)
 
@@ -80,5 +88,5 @@ while p_sorteio['Contador'] <= p_sorteio['Contagem final']:
         print(f'Nanarei {sleep_time}s. Logo, acordarei {hora_final}.')
         sleep(sleep_time)
 
-        vai_e_clica(int(refresh[0]), int(refresh[1]))
+        vai_e_clica(randomiza(int(refresh[0]), int(refresh[1])))
         sleep(randint(5, 10))

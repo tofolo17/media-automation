@@ -7,9 +7,9 @@ from selenium.webdriver.common.keys import Keys
 
 class WhatsappBot:
 
-    def __init__(self):
-        self.message = "sheesh"
-        self.recipient = "Pepepepepee"
+    def __init__(self, message, recipient):
+        self.message = message
+        self.recipient = recipient
         self.driver = webdriver.Chrome(os.environ.get("DRIVER_PATH"))
 
     def open_wpp(self):
@@ -26,6 +26,6 @@ class WhatsappBot:
             chat_box = self.driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
             chat_box.click()
             chat_box.send_keys(self.message + Keys.ENTER)
-            sleep(0.0000000000000000000000000000000000000000001)
+            sleep(1 / 100)
         except Exception:
             pass
