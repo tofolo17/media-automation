@@ -33,7 +33,7 @@ by their purpose:
        URL with the support of the [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) package,
        partition it into several pieces and distribute it to different addresses, from different addresses, in seconds;
     2. [WhatsAppBomber](https://github.com/tofolo17/automation-collection/tree/main/WhatsAppBomber): similarly, extract
-       texts and, with PyAutoGUI or Selenium, bombs a contact's WhatsApp. If text is not enough, images can be used.
+       texts and, with [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) or [Selenium](https://www.selenium.dev), bombs a contact's WhatsApp. If text is not enough, images can be used.
 2. Find imposters:
     1. [FollowingNFollowersComparator](https://github.com/tofolo17/automation-collection/tree/main/InstagramAutomations/%20FollowingNFollowersComparator):
        with [Instaloader](https://github.com/instaloader/instaloader), see who you follow but don't follow back on
