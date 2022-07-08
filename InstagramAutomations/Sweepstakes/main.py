@@ -15,7 +15,7 @@ bloqueio = coordenadas[6]
 sair_post = coordenadas[7]
 refresh = coordenadas[8]
 
-# Dicionário  de parâmetros
+# Dicionário de parâmetros
 p_sorteio = {
     'Quantidade de participantes': 2,
     'Contador': pegar_contagem('Data/contagem'),
