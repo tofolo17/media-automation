@@ -36,11 +36,10 @@ by their purpose:
        texts and, with [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) or [Selenium](https://www.selenium.dev), bombs a contact's WhatsApp. If text is not enough, images can be used.
 2. Find imposters:
     1. [FollowingNFollowersComparator](https://github.com/tofolo17/automation-collection/tree/main/InstagramAutomations/%20FollowingNFollowersComparator):
-       with [Instaloader](https://github.com/instaloader/instaloader), see who you follow but don't follow back on
-       Instagram (and vice versa).
+       with [Instaloader](https://github.com/instaloader/instaloader), check who doesn't follow you back.
 3. Win sweepstakes:
     1. [Sweepstakes](https://github.com/tofolo17/automation-collection/tree/main/InstagramAutomations/Sweepstakes): with
-       PyAutoGUI, define parameters (URL, number of people per comment, etc.), define coordinates (buttons, tabs, etc.),
+       PyAutoGUI, define parameters (URL, number of people per comment, etc.), delimit coordinates (buttons, tabs, etc.),
        and watch the robot make dozens of comments in a sweepstake of your choice.
 
 Note: the misuse of these programs is not my responsibility. They were created for pure playfulness and exploration of
